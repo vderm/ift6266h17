@@ -414,6 +414,16 @@ def main(settings):
     # Compile another function generating some data
     gen_fn = theano.function([border_var, caption_var], lasagne.layers.get_output(generator, deterministic=True))
 
+    # Continue training
+    # TODO make as an argument
+    # print "Loading model..."
+    # with np.load('gen_20170428050346_ep60_e2048_c128_extraG.npz') as f:
+    #     param_values = [f['arr_%d' % i] for i in range(len(f.files))]
+    # lasagne.layers.set_all_param_values(generator, param_values)
+    # with np.load('dis_20170428050346_ep60_e2048_c128_extraG.npz') as f:
+    #     param_values = [f['arr_%d' % i] for i in range(len(f.files))]
+    # lasagne.layers.set_all_param_values(discriminator, param_values)
+
     # Finally, launch the training loop.
     print("Starting training...")
     # We iterate over epochs:
@@ -517,7 +527,7 @@ if __name__ == '__main__':
     p.add_argument('--sFilt',                 default = 4,      type = int,      help = 'size')
     p.add_argument('--strid',                 default = 2,      type = int,      help = 'stride')
     p.add_argument('--pad',                   default = 1,      type = int,      help = 'padding')
-    p.add_argument('--sEncd',                 default = 1024,   type = int,      help = 'encoding size')
+    p.add_argument('--sEncd',                 default = 2048,   type = int,      help = 'encoding size')
     p.add_argument('--useBilinear',           default = False,  type = str2bool, help = 'use bilinear upscaling in generator decoder section [!failing results!]')
     p.add_argument('--addExtraGLayer',        default = False,  type = str2bool, help = 'add an extra layer at the end of the generator')
 
@@ -532,7 +542,7 @@ if __name__ == '__main__':
     p.add_argument('--genLossW',              default = 0.001,  type = float,    help = 'weight to apply to discriminator induced generator loss')
 
     # doc2vec settings
-    p.add_argument('--sVector',               default = 256,    type = int,      help = 'encoding vector length')
+    p.add_argument('--sVector',               default = 128,    type = int,      help = 'encoding vector length')
     p.add_argument('--trainDoc2Vec',          default = False,  type = str2bool, help = 'train Doc2Vec model? otherwise load previously pre-trained model')
 
     # Other settings

@@ -7,7 +7,7 @@ Please refer to my [blog](https://vderm.wordpress.com) for more information.
 # Description
 There are two files in this repo. I'm not a software developer, so I didn't neatly split the code into different folders. I rather have everything in one file to ease troubleshooting. When the time comes and I need to build more neural nets, I'll split things up.
 
-The model file =dcgan_doc2vec_embed.py= is the approach I used for this course. The paths at the very top of the file need to be changed to reflect the directories on your machine. The rest of the settings can be called via the command line and/or through a batch file. An example is given, see =batch.sh=.
+The model file **dcgan_doc2vec_embed.py** is the approach I used for this course. The paths at the very top of the file need to be changed to reflect the directories on your machine. The rest of the settings can be called via the command line and/or through a batch file. An example is given, see **batch.sh**.
 
 The script will display training images at a given interval and print out the training error per epoch. When the training is complete, the models can be saved and a validation image will be displayed. The user can optionally not quit the script and remain in an interactive mode to plot more examples or continue training. The training error information is saved to a CSV file in the script directory. Images can optionally be saved in the script directory.
 

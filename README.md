@@ -1,5 +1,5 @@
 # ift6266h17
-Deep Learning Course Repository  
+Deep Learning Course Repository: Image In-Painting using DCGAN and lemmatized captions  
 [Course](http://ift6266h17.wordpress.com) Instructor: [Prof. Aaron Courville](https://mila.umontreal.ca/en/person/aaron-courville/) @ [MILA](https://mila.umontreal.ca/en/), Winter 2017 Session
 
 Please refer to my [blog](https://vderm.wordpress.com) for more information.
